@@ -8,7 +8,7 @@ The basic terraform workflow is:
 
 
 ## Setup instructions
-In this example we utilise Gitlab's terraform state storage solution. This stores the terraform state file with your project. When you create a merge request the Gilab pipeline will trigger a terraform plan. When you merge changes to the master branch the terraform apply will run.
+In this example we utilise Gitlab's terraform state storage solution. This stores the terraform state file with your project. When you create a merge request the Gilab pipeline will trigger a terraform plan. When you merge changes to the main branch the terraform apply will run.
 
 ### Step 1: Create the project and setup variables
 1. If you do not already have one, create a project in GitLab and copy all the files from this repo into it. Make sure to copy `main.tf` and the hidden files  `.gitlab-ci.yml` and `.gitignore` files **but not** the `.git` folder.
@@ -30,7 +30,7 @@ git push
 ```
 
 ### Step 2: Verify the pipeline
-Pushing the master branch will cause the pipeline to run. 
+Pushing the main branch will cause the pipeline to run. 
 1. Verify under CI/CD -> Pipelines that the pipeline has run without errors. Correct any errors and re-run if necessary.
 2. If its worked it will have run the terraform plan but not the terraform apply. The apply step is currently configured to be manually run. Run the apply step in Gitlab UI and verify the alert policy is created successfully in your New Relic account.
 3. Observe in Gitlab under Infratstructure -> Terraform that the state file is present
@@ -45,7 +45,7 @@ git push --set-upstream origin change1
 ```
 5. In Gitlab create a merge request for the change. 
 6. Observe the pipeline runs up to and including the plan stage successfully. (This might take some time.)
-7. In Gitlab merge request merge the change to master branch.
+7. In Gitlab merge request merge the change to main branch.
 8. Observe the pipeline runs then pauses at the apply stage.
 9. Execute the apply in the deploy stage of the pipeline and observe the changes made in your New Relic account.
 
