@@ -24,7 +24,7 @@ In this example we utilise Gitlab's terraform state storage solution. This store
 ```
 git add .gitignore
 git add .gitlab-ci.yml
-git add .*
+git add *
 git commit -m "init"
 git push
 ```
