@@ -11,7 +11,7 @@ The basic terraform workflow is:
 In this example we utilise Gitlab's terraform state storage solution. This stores the terraform state file with your project. When you create a merge request the Gilab pipeline will trigger a terraform plan. When you merge changes to the master branch the terraform apply will run.
 
 ### Step 1: Create the project and setup variables
-1. If you do not already have one, create a project in GitLab and copy all the files from this repo into it. Make sure to include the hidden `.gitlab-ci.yml` and `.gitignore` files **but not** the `.git` folder.
+1. If you do not already have one, create a project in GitLab and copy all the files from this repo into it. Make sure to copy `main.tf` and the hidden files  `.gitlab-ci.yml` and `.gitignore` files **but not** the `.git` folder.
 2. In your Gitlab project under Settings -> CI/CD -> Variables create the following environment variables:
     a. `NEW_RELIC_ACCOUNT_ID`:  Set this to your New Relic account ID, do not enable protection or masking.
     b. `NEW_RELIC_API_KEY`: Set this to your New Relic User API Key. Enable masking but not protection.
