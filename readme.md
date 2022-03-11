@@ -37,7 +37,7 @@ Pushing the main branch will cause the pipeline to run.
 
 ### Step 3: Test the PR pipeline process:
 1. Create a new branch on your local machine: `git checkout -b "change1"`
-2. Make a change to the terraform configuration (e.g. change the policy name). 
+2. Make a change to the terraform configuration in [main.tf](main.tf) (e.g. change the policy name). 
 3. Commit and push the branch to Gitlab: 
 ```
 git commit -a -m "Policy name changed"
