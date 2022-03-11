@@ -1,9 +1,9 @@
 # New Relic Terraform Workflow Example (Gitlab)
 This example project shows how you can use GitLab CI/CD pipelines to automate your terraform workflow. It demonstrates using Gitlab managed terraform state and how to provide input variables to your terraform configuration.
 
-The basic terraform workflow is:
+The basic [terraform workflow](https://www.terraform.io/intro/core-workflow) is:
 1. Create a change in a new branch
-2. Create a merge request (Pipline runs terraform plan)
+2. Create a merge request (Pipeline runs terraform plan)
 3. Merge request (Pipeline runs terraform apply)
 
 
