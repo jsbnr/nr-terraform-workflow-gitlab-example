@@ -22,11 +22,17 @@ init:
   stage: prepare
   script:
     - gitlab-terraform init
+  only:
+    - merge_requests
+    - main
 
 validate:
   stage: validate
   script:
     - gitlab-terraform validate
+  only:
+    - merge_requests
+    - main
 
 plan:
   stage: build
@@ -39,6 +45,9 @@ plan:
       - ${TF_ROOT}/plan.cache
     reports:
       terraform: ${TF_ROOT}/plan.json
+  only:
+    - merge_requests
+    - main
 
 apply:
   stage: deploy
@@ -50,4 +59,4 @@ apply:
     - plan
   when: manual
   only:
-    - master
+    - main
