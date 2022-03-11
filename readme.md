@@ -18,8 +18,8 @@ In this example we utilise Gitlab's terraform state storage solution. This store
     - `TF_VAR_AlertAccountId`: Set this to your New Relic account ID, **do not enable protection or masking.** This is to domnostrate how you pass input variable `AlertAccountId` to your configuration.
 3. Decide on your STATE-NAME: This can be anything you like, you can have different names for different environments. You could simply choose `newrelic-state`.
 4. Update [.gitlab-ci.yml](.gitlab-ci.yml) with your chosen STATE-NAME where shown. This is in two places:
-    - TF_ADDRESS
-    - Cache -> Key
+    - TF_ADDRESS (line #5)
+    - Cache -> Key (line #8)
 5. Commit all the files and push to Gitlab:
 ```
 git add .gitignore
