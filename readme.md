@@ -58,6 +58,7 @@ If you want to be able to work locally then you need to ensure you local terrafo
 1. Find your projects PROJECT-ID: This can be found on Settings -> General, it is a number.
 2. If you dont already have one, generate a personal access token in Gitlab for your user with `api` scope.
 3. Update the following command with your PROJECT-ID, STATE-NAME, GitLab USERNAME and ACCESS-TOKEN where approriate and run in your project folder:
+```
 terraform init \
     -backend-config="address=https://gitlab.com/api/v4/projects/<YOUR-PROJECT-ID>/terraform/state/<YOUR-STATE-NAME>" \
     -backend-config="lock_address=https://gitlab.com/api/v4/projects/<YOUR-PROJECT-ID>/terraform/state/<YOUR-STATE-NAME>/lock" \
@@ -67,6 +68,7 @@ terraform init \
     -backend-config="lock_method=POST" \
     -backend-config="unlock_method=DELETE" \
     -backend-config="retry_wait_min=5"
+```
 
 6. Test the configuration by running a terraform plan (or you could make a change and test an apply):
 ```
