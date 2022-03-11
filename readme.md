@@ -10,6 +10,8 @@ The basic terraform workflow is:
 ## Setup instructions
 In this example we utilise Gitlab's terraform state storage solution. This stores the terraform state file with your project. When you create a merge request the Gilab pipeline will trigger a terraform plan. When you merge changes to the main branch the terraform apply will run.
 
+> Note: this workflow assumes you main branch is called 'main'. If not you will need to adjust .gitlab-ci.yml accordingly.
+
 ### Step 1: Create the project and setup variables
 1. If you do not already have one, create a project in GitLab and copy all the files from this repo into it. Make sure to copy `main.tf` and the hidden files  `.gitlab-ci.yml` and `.gitignore` files **but not** the `.git` folder.
 2. In your Gitlab project under Settings -> CI/CD -> Variables create the following environment variables:
