@@ -43,10 +43,10 @@ Pushing the main branch will cause the pipeline to run.
 git commit -a -m "Policy name changed"
 git push --set-upstream origin change1
 ```
-5. In Gitlab create a merge request for the change. 
-6. Observe the pipeline runs up to and including the plan stage successfully. (This might take some time.)
-7. In Gitlab merge request merge the change to main branch.
-8. Observe the pipeline runs then pauses at the apply stage.
+5. In Gitlab create a merge request for the branch you just pushed. 
+6. Observe the pipeline runs up to and including the plan stage successfully. (This might take some time, hang in there.)
+7. Once the pipline has finished, in Gitlab merge the merge request to main branch.
+8. Observe the pipeline rstarts again but pauses at the apply stage.
 9. Execute the apply in the deploy stage of the pipeline and observe the changes made in your New Relic account.
 
 > Note: You can enable auto-execution of the terraform apply, see below.
