@@ -31,7 +31,7 @@ git push
 
 ### Step 2: Verify the pipeline
 Pushing the master branch will cause the pipeline to run. 
-1. Verify under CI/CD -> Pipelines that the pipline has run without errors. Correct any errors and re-run if necessary.
+1. Verify under CI/CD -> Pipelines that the pipeline has run without errors. Correct any errors and re-run if necessary.
 2. If its worked it will have run the terraform plan but not the terraform apply. The apply step is currently configured to be manually run. Run the apply step in Gitlab UI and verify the alert policy is created successfully in your New Relic account.
 3. Observe in Gitlab under Infratstructure -> Terraform that the state file is present
 
