@@ -35,7 +35,7 @@ git push
 Pushing the main branch will cause the pipeline to run. 
 1. Verify under CI/CD -> Pipelines that the pipeline has run without errors. Correct any errors and re-run if necessary.
 2. If its worked it will have run the terraform plan but not the terraform apply. The apply step is currently configured to be manually run. Run the apply step in Gitlab UI and verify the alert policy is created successfully in your New Relic account.
-3. Observe in Gitlab under Infratstructure -> Terraform that the state file is present
+3. Observe in Gitlab under Infrastructure -> Terraform that the state file is present
 
 ### Step 3: Test the PR pipeline process:
 1. Create a new branch on your local machine: `git checkout -b "change1"`
