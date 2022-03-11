@@ -13,9 +13,9 @@ In this example we utilise Gitlab's terraform state storage solution. This store
 ### Step 1: Create the project and setup variables
 1. If you do not already have one, create a project in GitLab and copy all the files from this repo into it. Make sure to copy `main.tf` and the hidden files  `.gitlab-ci.yml` and `.gitignore` files **but not** the `.git` folder.
 2. In your Gitlab project under Settings -> CI/CD -> Variables create the following environment variables:
-    a. `NEW_RELIC_ACCOUNT_ID`:  Set this to your New Relic account ID, do not enable protection or masking.
-    b. `NEW_RELIC_API_KEY`: Set this to your New Relic User API Key. Enable masking but not protection.
-    c. `TF_VAR_AlertAccountId`: Set this to your New Relic account ID, do not enable protection or masking. This is to domnostrate how you pass input variable `AlertAccountId` to your configuration.
+    - `NEW_RELIC_ACCOUNT_ID`:  Set this to your New Relic account ID, do not enable protection or masking.
+    - `NEW_RELIC_API_KEY`: Set this to your New Relic User API Key. Enable masking but not protection.
+    - `TF_VAR_AlertAccountId`: Set this to your New Relic account ID, do not enable protection or masking. This is to domnostrate how you pass input variable `AlertAccountId` to your configuration.
 3. Decide on your STATE-NAME: This can be anything you like, you can have different names for different environments. You could simply choose `newrelic-state`.
 4. Update [.gitlab-ci.yml](.gitlab-ci.yml) with your chosen STATE-NAME where shown. This is in two places:
     - TF_ADDRESS
