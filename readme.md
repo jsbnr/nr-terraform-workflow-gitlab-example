@@ -1,4 +1,8 @@
 # New Relic Terraform Workflow Example (Gitlab)
+
+**This content has now moved here: [https://github.com/newrelic-experimental/oma-nr-terraform-workflows(https://github.com/newrelic-experimental/oma-nr-terraform-workflows)
+---
+
 This example project shows how you can use GitLab CI/CD pipelines to automate your New Relic terraform workflow. It demonstrates using Gitlab managed terraform state and how to provide input variables to your terraform configuration.
 
 The basic [terraform workflow](https://www.terraform.io/intro/core-workflow) is:
